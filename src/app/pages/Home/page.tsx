@@ -1,5 +1,11 @@
-import HeroSection from "./hero-section";
+// import HeroSection from "./hero-section";
+import ScrollVideo from "./ScrollVideo";
 
 export default function Home() {
-  return <HeroSection />;
+  return (
+    <>
+      {/* <HeroSection /> */}
+      <ScrollVideo />
+    </>
+  );
 }

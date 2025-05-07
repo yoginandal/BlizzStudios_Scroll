@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 type ModelProps = {
   position?: [number, number, number];
+  rotation?: [number, number, number];
 };
 
 const Model = React.forwardRef<Group, ModelProps>((props, ref) => {
@@ -51,11 +52,7 @@ const Hero: React.FC = () => {
         <Canvas camera={{ position: [0, 0, 18], fov: 45 }}>
           <ambientLight intensity={0.6} />
           <directionalLight position={[5, 5, 5]} />
-          <Model
-            ref={modelRef}
-            rotation={[0, Math.PI * 1.5, 0]}
-            position={[0, -1, 0]}
-          />
+          <Model ref={modelRef} position={[0, -1, 0]} />
           <OrbitControls
             enableZoom={false}
             enablePan={false}

@@ -63,6 +63,9 @@ export default function ScrollVideo() {
           } else {
             vid.currentTime = progress * vid.duration;
           }
+          // Force a frame update for smoother scrubbing
+          ctx.clearRect(0, 0, cn.width, cn.height);
+          ctx.drawImage(vid, 0, 0, cn.width, cn.height);
         },
       });
     };
